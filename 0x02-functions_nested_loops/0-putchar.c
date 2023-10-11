@@ -11,6 +11,7 @@
 int main(void)
 {
 	char mychar[] = "_putchar";
+
 	print_word(mychar);
 	printNewLine();
 	return (0);
