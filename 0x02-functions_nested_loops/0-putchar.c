@@ -2,13 +2,16 @@
 #include "main.h"
 /**
  *main- Entry point
- *description- this is to print _putchar followed by a new line.
- *		You are not allowed to use the standard library.
- *		Any use of functions like printf, puts, etc… is forbidden.
- *		You are allowed to use _putchar. No more than 5 functions per fili
- * return- 0 (sucsses)
+ * * Description: This program prints "_putchar" followed by a new line.
+ *              It is not allowed to use the standard library.
+ *              Any use of functions like printf, puts, etc... is forbidden.
+ *              Only _putchar is allowed. No more than 5 functions per file.
+ *
+ * Return: 0 (Success)
  */
+/*main functionis the intery point */
 int main(void)
+/*main functionis the intery point */
 {
 	char mychar[] = "_putchar";
 
