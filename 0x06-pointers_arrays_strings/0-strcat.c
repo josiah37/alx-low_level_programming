@@ -18,18 +18,18 @@ char *_strcat(char *dest, char *src)
 	}
 
     /* Concatenate the source string to the destination string*/
-    j = 0;
-    while (src[j] != '\0')
-    {
-        dest[i] = src[j];
-        i++;
-        j++;
-    }
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
 
-    /*Add a terminating null byte */
-    dest[i] = '\0';
+	/*Add a terminating null byte */
+	dest[i] = '\0';
 
-    /*Return a pointer to the resulting string*/
-    return dest;
+	/*Return a pointer to the resulting string*/
+	return (dest);
 }
 
