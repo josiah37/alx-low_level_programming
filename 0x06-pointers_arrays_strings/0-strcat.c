@@ -8,19 +8,28 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char *s = dest;
+	int i, j;
 
-	while (*dest != '\0')
+    /* Find the end of the destination string */
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest++;
+	i++;
 	}
 
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (s);
+    /* Concatenate the source string to the destination string*/
+    j = 0;
+    while (src[j] != '\0')
+    {
+        dest[i] = src[j];
+        i++;
+        j++;
+    }
+
+    /*Add a terminating null byte */
+    dest[i] = '\0';
+
+    /*Return a pointer to the resulting string*/
+    return dest;
 }
+
