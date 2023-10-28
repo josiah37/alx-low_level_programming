@@ -3,11 +3,8 @@
  *
  * Return: Always 0.
  */
-<<<<<<< HEAD
-=======
 int _islower(int c);
 int _putchar(char c);
->>>>>>> 754773dd58568eee6f6b9d6c8542862eb7c62ef0
 int main(void)
 {
     int r;
