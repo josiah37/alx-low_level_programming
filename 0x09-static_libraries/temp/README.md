@@ -1,0 +1,1 @@
+in this project i made a static library called 'my' or libmy.a out of diffrent kinds of code that i have been working on priviously. i also put the prototype of each function so that anyone can use it.
