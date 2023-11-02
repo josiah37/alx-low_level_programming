@@ -18,11 +18,11 @@ int main(void)
     c = malloc_checked(sizeof(char) * 1024);
     printf("num1 %p\n", (void *)c);
     i = malloc_checked(sizeof(int) * 402);
-    printf("num2 %p\n", (void *)i);
+    printf("%p\n", (void *)i);
     f = malloc_checked(sizeof(float) * 100000000);
-    printf("num3 %p\n", (void *)f);
+    printf("%p\n", (void *)f);
     d = malloc_checked(INT_MAX);
-    printf("num4 %p\n", (void *)d);
+    printf("%p\n", (void *)d);
     free(c);
     free(i);
     free(f);

@@ -31,42 +31,39 @@ int **alloc_grid(int width, int height)
 	 int i, R, C;
 	 
 /*setting the condition if paramters are 0 or bellow*/
-	 if (width || height <= 0)
+	 if (width <= 0 || height <= 0)
 		 return (NULL);
-
 /*allocating memory for the pointer that the row pointers points to */
-	int **my_matrix = malloc(sizeof(int *) * width);
-
+	int **my_matrix = malloc(sizeof(int *) * height);
 /* allocating memory for each row (the emlemts in each row)of the 2d array */
-		for (i = 0; i < width; i++)
+		for (i = 0; i < height; i++)
 		{
-			my_matrix[i] = malloc(sizeof(int) * height);
+			my_matrix[i] = malloc(sizeof(int) * width);
 		}
-
 	/* if memory could not be allocated */
-		if (my_matrix == NULL)
+		if (my_matrix == 0)
 			return (NULL);
-
 /*
  * intalizing each elemnts of the array to zero. all elments are pointed the
  * 3 pointers and they all point to my_matrix. So we can assign like
  * my_matrix[2] help us acsess the 3rd row and my_matrix[2][4] help us to
  * accsess the elemnt on the 3rd row and 4th columun of the 2D array
  */
-	for (R = 0; R < width; R++)
+	for (R = 0; R < height; R++)
 	{
-		for (C = 0; C < height; C++)
+		for (C = 0; C < width; C++)
 			my_matrix[R][C] = 0;
 
 	}
-	
+	 	
 /*Freeing the memory allocated to the three pointers (this has to be 1st)*/
-	for (R = 0; R < width; R++)
-	{
-		free(my_matrix[R]);
+	for (R = 0; R < height; R++)
+	{	
+		if (my_matrix[R] == 0)
+			free(my_matrix[R]);
 	}
 /* Freeing the double pointer 2nd (not to lose z 3 row pointers b4 got freed*/
-	free(my_matrix);
+	
 
 	return (my_matrix);
 }
