@@ -21,15 +21,17 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	unsigned int i;
 
-	/*	checking if allocation fails */
-	if (my_calloc == NULL)
-		return (NULL);
 	/* if size or numb of elemnt is passed as 0*/
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
 	/* allocating memory for the pointer*/
         my_calloc = malloc(nmemb * size);
+
+	 /*      checking if allocation fails */
+	if (my_calloc == NULL)
+		return (NULL);
+
 /*
  * intalizing each elemnt to zero. we use another pointer becase we
  * can inalize it dircetly while using a void pointer
