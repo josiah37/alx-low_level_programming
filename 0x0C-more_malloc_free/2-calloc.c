@@ -7,15 +7,16 @@
  * @size: the sizeof each elemnts in the array
  *
  * Return: my_malloc
- * Explaintion: declaring the pointer as void b/c wedont know what the array is 
- * pointing to (int, char, float..) so making it void increases the flaxability
+ * Explaintion: declaring the pointer as void b/c wedont know what
+ * the array is pointing to (int, char, float..) so making it void
+ * increases the flaxability
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-/*declaring the pointer as void b/c wedont know what the array is pointing to */
+/*declaring the pointer as void b/c wedont know what z array is pointing to*/
 	void *my_calloc;
-	
+
 	unsigned int i;
 
 	/* allocating memory for the pointer*/
@@ -28,8 +29,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 /*
- * intalizing each elemnt to zero. we use another pointer becase we can inalize 
- * it dircetly while using a void pointer
+ * intalizing each elemnt to zero. we use another pointer becase we
+ * can inalize it dircetly while using a void pointer
  */
 	char *ptr = my_calloc;
 
