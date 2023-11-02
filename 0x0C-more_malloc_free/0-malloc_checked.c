@@ -11,6 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	/* allocating memory for "b" number of int */
 	int *ptr;
+
 	ptr = malloc(b);
 
 	/* condition if malloc falils to allocate memory */
