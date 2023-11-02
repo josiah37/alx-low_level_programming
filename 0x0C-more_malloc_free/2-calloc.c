@@ -26,7 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	/* allocating memory for the pointer*/
-        my_calloc = malloc(nmemb * size);
+	my_calloc = malloc(nmemb * size);
 
 	 /*      checking if allocation fails */
 	if (my_calloc == NULL)
