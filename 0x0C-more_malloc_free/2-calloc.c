@@ -35,8 +35,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  * can inalize it dircetly while using a void pointer
  */
 
-	for (i = 0; i < nmemb * size; i++)
-		my_calloc[i] = '0';
+	for (i = 0; i < (nmemb * size); i++)
+		my_calloc[i] = 0;
 	/*returning the new memory for the array to back to the caller*/
 	return (my_calloc);
 
