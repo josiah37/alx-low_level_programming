@@ -15,7 +15,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 /*declaring the pointer as void b/c wedont know what z array is pointing to*/
-	void *my_calloc;
+	char *my_calloc;
 
 	char *ptr;
 
@@ -36,7 +36,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  */
 	ptr = my_calloc;
 
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < nmemb * size; i++)
 		ptr[i] = '0';
 	/*returning the new memory for the array to back to the caller*/
 	return (my_calloc);
