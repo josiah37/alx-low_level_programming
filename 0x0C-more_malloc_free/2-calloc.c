@@ -37,7 +37,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = my_calloc;
 
 	for (i = 0; i < nmemb; i++)
-		ptr[i] = '\0';
+		ptr[i] = '0';
 	/*returning the new memory for the array to back to the caller*/
 	return (my_calloc);
 
