@@ -15,17 +15,23 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	/* calculating size of our total string (including '\0')*/
-	int total_len = strlen(s1) + strlen(s2) + 1;
+	int total_len;
 
-	/* allocating new spoace memory for of our new string*/
-	char *space = malloc(sizeof(char) * total_len);
+	char *space;
 
-	/*asigning an empty string if s1 and s2 are passed null*/
+/*asigning an empty string if s1 and s2 are passed null*/
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+
+	/* calculating size of our total string (including '\0')*/
+	total_len = strlen(s1) + strlen(s2) + 1;
+
+	/* allocating new spoace memory for of our new string*/
+	space = malloc(sizeof(char) * total_len);
+
 	/*	condition if the function fails		*/
 	if (space == NULL)
 		return (NULL);
