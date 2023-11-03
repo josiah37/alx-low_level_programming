@@ -52,6 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*putting the 1st string into our new space*/
 	for (i = 0; i <= n; i++)
 		space[s1_len + i] = s2[i];
+	space[s1_len + n] = '\0';
 /* passing the allocated memory (allong wz the new string)to the main */
 	return (space);
 }
