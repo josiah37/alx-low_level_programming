@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include "main.h"
+/**
+
+
+
+*/
+
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	/*opening the file */
+
+	int fd = open(filename, O_RDONLY)
+
+	/*reading the file */
+
+
+	//alocating buffer (space) to store what is being read
+	char  my_buffer[letters];
+	ssize_t read_bytes = read(fd, sizeof(my_buffer), letters);
+
+	/*reading from the file to our buffer*/
+	while (readbytes != 0)
+	{
+		printf("%s", my_buffer);
+		read_bytes = read(fd, sizeof(my_buffer), letters);
+	
+	} 
+	return (read_bytes);
+}
+

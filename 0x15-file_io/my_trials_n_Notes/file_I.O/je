@@ -1,0 +1,16 @@
+#include <fcntl.h>
+#include <stdio.h>
+/*
+
+stdin
+*/
+int main ()
+{
+	int file_d;
+	file_d = open("abc.txt", O_WRONLY |O_CREAT);
+	if (file_d == -1)
+		printf("can not create the  file\n");
+	else 
+		printf("File is created succsesfully\n");
+	return (0);
+}
